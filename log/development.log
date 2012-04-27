@@ -211,3 +211,277 @@ Migrating to DropUsers (20120427000007)
   [1m[35mSQL (0.7ms)[0m  SHOW KEYS FROM `active_admin_comments`
   [1m[36mSQL (1.2ms)[0m  [1mdescribe `admin_users`[0m
   [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `admin_users`
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2012-04-27 09:38:17 -0500
+  Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions and will be removed from Formtastic after 2.1. Please see ActionsHelper and InputAction or ButtonAction for more information. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+DEPRECATION WARNING: f.commit_button is deprecated in favour of f.action(:submit) and will be removed from Formtastic after 2.1. Please see ActionsHelper and InputAction or ButtonAction for more information. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (369.9ms)
+Completed 200 OK in 420ms (Views: 395.9ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+Migrating to DropUsers (20120427000007)
+Migrating to AddFieldsToAccounts (20120427155533)
+  [1m[35mSQL (413.0ms)[0m  ALTER TABLE `accounts` ADD `name` varchar(255) NOT NULL
+  [1m[36mSQL (309.6ms)[0m  [1mALTER TABLE `accounts` ADD `age` int(11) NOT NULL[0m
+  [1m[35mSQL (333.6ms)[0m  ALTER TABLE `accounts` ADD `height` int(11) NOT NULL
+  [1m[36mSQL (321.0ms)[0m  [1mALTER TABLE `accounts` ADD `weight` decimal(2) NOT NULL[0m
+  [1m[35mSQL (64.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120427155533')
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.3ms)[0m  describe `accounts`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `accounts`[0m
+  [1m[35mSQL (1.1ms)[0m  describe `active_admin_comments`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `active_admin_comments`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `admin_users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `admin_users`[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to AddFieldsToAccounts (20120427155533)
+  [1m[35mSQL (394.4ms)[0m  ALTER TABLE `accounts` DROP `name`
+  [1m[36mSQL (321.0ms)[0m  [1mALTER TABLE `accounts` DROP `age`[0m
+  [1m[35mSQL (288.3ms)[0m  ALTER TABLE `accounts` DROP `height`
+  [1m[36mSQL (300.4ms)[0m  [1mALTER TABLE `accounts` DROP `weight`[0m
+  [1m[35mAREL (64.3ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20120427155533'
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.1ms)[0m  describe `accounts`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `accounts`[0m
+  [1m[35mSQL (1.0ms)[0m  describe `active_admin_comments`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `active_admin_comments`[0m
+  [1m[35mSQL (1.1ms)[0m  describe `admin_users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `admin_users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+Migrating to DropUsers (20120427000007)
+Migrating to AddFieldsToAccounts (20120427155533)
+  [1m[35mSQL (332.2ms)[0m  ALTER TABLE `accounts` ADD `name` varchar(255) NOT NULL
+  [1m[36mSQL (276.8ms)[0m  [1mALTER TABLE `accounts` ADD `age` int(11) NOT NULL[0m
+  [1m[35mSQL (289.4ms)[0m  ALTER TABLE `accounts` ADD `height` int(11) NOT NULL
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DropUsers (20120427000007)
+  [1m[35mAREL (152.5ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20120427000007'
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.3ms)[0m  describe `accounts`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `accounts`[0m
+  [1m[35mSQL (1.0ms)[0m  describe `active_admin_comments`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `active_admin_comments`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `admin_users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `admin_users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+Migrating to DropUsers (20120427000007)
+  [1m[35mSQL (0.7ms)[0m  DROP TABLE `users`
+Mysql2::Error: Unknown table 'users': DROP TABLE `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+Migrating to DropUsers (20120427000007)
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE `users`
+Mysql2::Error: Unknown table 'users': DROP TABLE `users`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateAccounts (20120426235744)
+  [1m[35mSQL (159.8ms)[0m  DROP TABLE `accounts`
+  [1m[36mAREL (108.7ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20120426235744'[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `active_admin_comments`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `active_admin_comments`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `admin_users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `admin_users`
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+  [1m[36mSQL (168.4ms)[0m  [1mCREATE TABLE `accounts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `accounts`
+  [1m[36mSQL (308.7ms)[0m  [1mCREATE UNIQUE INDEX `index_accounts_on_email` ON `accounts` (`email`)[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `accounts`
+  [1m[36mSQL (287.0ms)[0m  [1mCREATE UNIQUE INDEX `index_accounts_on_reset_password_token` ON `accounts` (`reset_password_token`)[0m
+  [1m[35mSQL (53.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120426235744')
+Migrating to DropUsers (20120427000007)
+  [1m[36mSQL (0.5ms)[0m  [1mDROP TABLE `users`[0m
+  [1m[35mSQL (86.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120427000007')
+Migrating to AddFieldsToAccounts (20120427155533)
+  [1m[36mSQL (331.2ms)[0m  [1mALTER TABLE `accounts` ADD `name` varchar(255) NOT NULL[0m
+  [1m[35mSQL (309.9ms)[0m  ALTER TABLE `accounts` ADD `age` int(11) NOT NULL
+  [1m[36mSQL (299.0ms)[0m  [1mALTER TABLE `accounts` ADD `height` int(11) NOT NULL[0m
+  [1m[35mSQL (333.4ms)[0m  ALTER TABLE `accounts` ADD `weight` decimal(10,2) NOT NULL
+  [1m[36mSQL (53.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120427155533')[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `accounts`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `accounts`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `active_admin_comments`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `active_admin_comments`
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `admin_users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `admin_users`
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2012-04-27 11:00:41 -0500
+  Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+DEPRECATION WARNING: f.buttons is deprecated in favour of f.actions and will be removed from Formtastic after 2.1. Please see ActionsHelper and InputAction or ButtonAction for more information. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+DEPRECATION WARNING: f.commit_button is deprecated in favour of f.action(:submit) and will be removed from Formtastic after 2.1. Please see ActionsHelper and InputAction or ButtonAction for more information. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (257.8ms)
+Completed 200 OK in 275ms (Views: 261.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2012-04-27 11:00:46 -0500
+  Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6qwTvXjzZlnp2RTNdj11ylXKKWjM1UFr//k6IewPJI=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAdminUser Load (0.8ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`email` = 'admin@example.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `admin_users` SET `current_sign_in_at` = '2012-04-27 16:00:47', `sign_in_count` = 2, `updated_at` = '2012-04-27 16:00:47' WHERE (`admin_users`.`id` = 1)
+  [1m[36mSQL (83.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 577ms
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-04-27 11:00:47 -0500
+  Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.5ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/dashboard/index.html.arb (17.1ms)
+Completed 200 OK in 86ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/accounts" for 127.0.0.1 at 2012-04-27 11:00:49 -0500
+  Processing by Admin::AccountsController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[35mAccount Load (0.2ms)[0m  SELECT `accounts`.`id` FROM `accounts` LIMIT 1 OFFSET 0
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (422.0ms)
+Completed 200 OK in 583ms (Views: 515.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2012-04-27 11:00:55 -0500
+  Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT `admin_users`.`id` FROM `admin_users` LIMIT 1 OFFSET 0
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `admin_users`[0m
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT `admin_users`.* FROM `admin_users` ORDER BY `admin_users`.`id` desc LIMIT 30 OFFSET 0
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (306.9ms)
+Completed 200 OK in 341ms (Views: 313.6ms | ActiveRecord: 1.7ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAdminNotes (20120426180729)
+Migrating to MoveAdminNotesToComments (20120426180730)
+Migrating to CreateUsers (20120426185732)
+Migrating to DeviseCreateAdminUsers (20120426230719)
+Migrating to DeviseCreateAccounts (20120426235744)
+Migrating to DropUsers (20120427000007)
+Migrating to AddFieldsToAccounts (20120427155533)
+Migrating to AddNameToAdmin (20120427160222)
+  [1m[35mSQL (431.0ms)[0m  ALTER TABLE `admin_users` ADD `name` varchar(255) NOT NULL
+  [1m[36mSQL (64.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120427160222')[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `accounts`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `accounts`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `active_admin_comments`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `active_admin_comments`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `admin_users`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `admin_users`
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2012-04-27 11:03:21 -0500
+  Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT `admin_users`.`id` FROM `admin_users` LIMIT 1 OFFSET 0[0m
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `admin_users`
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` ORDER BY `admin_users`.`id` desc LIMIT 30 OFFSET 0[0m
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (334.0ms)
+Completed 200 OK in 439ms (Views: 341.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2012-04-27 11:03:58 -0500
+  Processing by Admin::AdminUsersController#index as HTML
+  [1m[35mAdminUser Load (0.6ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT `admin_users`.`id` FROM `admin_users` LIMIT 1 OFFSET 0[0m
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `admin_users`
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` ORDER BY `admin_users`.`id` desc LIMIT 30 OFFSET 0[0m
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (265.1ms)
+Completed 200 OK in 311ms (Views: 270.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2012-04-27 11:04:17 -0500
+  Processing by Admin::AdminUsersController#index as HTML
+  [1m[35mAdminUser Load (0.1ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[36mAdminUser Load (0.2ms)[0m  [1mSELECT `admin_users`.`id` FROM `admin_users` LIMIT 1 OFFSET 0[0m
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM `admin_users`
+  [1m[36mAdminUser Load (0.1ms)[0m  [1mSELECT `admin_users`.* FROM `admin_users` ORDER BY `admin_users`.`id` desc LIMIT 30 OFFSET 0[0m
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (252.5ms)
+Completed 200 OK in 277ms (Views: 259.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/accounts" for 127.0.0.1 at 2012-04-27 11:04:20 -0500
+  Processing by Admin::AccountsController#index as HTML
+  [1m[35mAdminUser Load (0.1ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: reorder is deprecated. Please use except(:order).order(...) instead. (called from realtime at /home/stickwithchrist/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295)
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT `accounts`.`id` FROM `accounts` LIMIT 1 OFFSET 0[0m
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/resource/index.html.arb (352.6ms)
+Completed 200 OK in 401ms (Views: 360.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2012-04-27 11:04:29 -0500
+  Processing by Admin::DashboardController#index as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT `admin_users`.* FROM `admin_users` WHERE (`admin_users`.`id` = 1) LIMIT 1
+Rendered /home/stickwithchrist/.rvm/gems/ruby-1.9.3-p125/gems/activeadmin-0.4.3/app/views/active_admin/dashboard/index.html.arb (4.6ms)
+Completed 200 OK in 45ms (Views: 18.5ms | ActiveRecord: 0.3ms)
