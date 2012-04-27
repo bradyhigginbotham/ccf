@@ -1,4 +1,0 @@
-ccf
-===
-
-Cajun Code Fest
